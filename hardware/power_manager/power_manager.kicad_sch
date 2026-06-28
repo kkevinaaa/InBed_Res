@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "8494d822-bbbe-4c4e-b530-f67e3ef7c837")
 	(paper "A4")
+	(title_block
+		(title "Cube Power Manager")
+		(date "2026-06-28")
+		(rev "v0.1")
+	)
 	(lib_symbols
 		(symbol "Battery_Management:LTC4054ES5-4.2"
 			(exclude_from_sim no)
@@ -2606,6 +2611,16 @@
 		)
 		(uuid "764283fa-a319-4a46-92a2-e83012cf7b31")
 	)
+	(text "VIN"
+		(exclude_from_sim no)
+		(at 106.934 26.162 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9d780523-dd1b-4ae0-b7ee-ce17267c2ab9")
+	)
 	(text "BAT_GND\n"
 		(exclude_from_sim no)
 		(at 157.48 60.198 0)
@@ -2700,6 +2715,12 @@
 		(color 0 0 0 0)
 		(uuid "bf844a87-1974-4d61-8290-4cd43b1d16dc")
 	)
+	(junction
+		(at 106.68 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c571bf8b-51c7-4243-866c-5893f396862a")
+	)
 	(wire
 		(pts
 			(xy 148.59 58.42) (xy 148.59 62.23)
@@ -2792,7 +2813,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 31.75) (xy 115.57 31.75)
+			(xy 99.06 31.75) (xy 106.68 31.75)
 		)
 		(stroke
 			(width 0)
@@ -3242,6 +3263,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 31.75) (xy 115.57 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c74643e2-128d-4608-9cd7-0f2312ad6a93")
+	)
+	(wire
+		(pts
 			(xy 88.9 134.62) (xy 88.9 107.95)
 		)
 		(stroke
@@ -3259,6 +3290,16 @@
 			(type default)
 		)
 		(uuid "d0f2f819-042a-40bd-b1b1-82e01c53cdb6")
+	)
+	(wire
+		(pts
+			(xy 228.6 68.58) (xy 246.38 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d48636fe-606b-4982-8b15-e9610eecca29")
 	)
 	(wire
 		(pts
@@ -3449,6 +3490,16 @@
 			(justify left bottom)
 		)
 		(uuid "9738c06d-f1ec-41df-9068-e16df43dae6e")
+	)
+	(label "3V3"
+		(at 246.38 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b1849cf4-cf94-4602-8028-4c6eb73dc25e")
 	)
 	(label "VIN"
 		(at 99.06 25.4 0)
@@ -3906,6 +3957,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 106.68 31.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26638887-48ae-4c25-b890-7dfab5abce6c")
+		(property "Reference" "TP4"
+			(at 109.22 27.1779 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 109.22 29.7179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 111.76 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 106.68 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1c39f82f-7d0a-4d16-a347-d5f2e95a67a7")
+		)
+		(instances
+			(project "power_manager"
+				(path "/8494d822-bbbe-4c4e-b530-f67e3ef7c837"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 99.06 31.75 90)
 		(unit 1)
@@ -3994,10 +4124,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "31e3142c-51b0-47ef-8e97-07131453fd4d")
 		(property "Reference" "TP1"
-			(at 142.748 53.34 90)
+			(at 141.224 56.134 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6248,10 +6377,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d6c981fc-8d3d-4aba-84be-b8b077fc7abf")
 		(property "Reference" "TP2"
-			(at 153.67 57.1499 90)
+			(at 152.908 56.388 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
