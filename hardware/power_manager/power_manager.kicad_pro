@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -148,7 +154,7 @@
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
@@ -164,7 +170,7 @@
           "td_onpthpad": true,
           "td_onroundshapesonly": false,
           "td_onsmdpad": true,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onvia": true
         }
       ],
@@ -203,7 +209,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +238,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -240,7 +253,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "v0.1"
+      "sch_revision": "v0.2"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -554,7 +567,7 @@
         "pattern": "*BAT"
       },
       {
-        "netclass": "Power",
+        "netclass": "Default",
         "pattern": "*BAT_ADC"
       },
       {
@@ -709,7 +722,7 @@
         "uuid": "8494d822-bbbe-4c4e-b530-f67e3ef7c837"
       }
     ],
-    "used_designators": "U1-3,R1-11,#FLG1,J1-5,#PWR1-18,D1-4,C1-5,TP1-6,Q1-25",
+    "used_designators": "U1-3,R1-12,#FLG1,J1-6,#PWR1-20,D1-4,C1-8,TP1-6,Q1-25",
     "variants": []
   },
   "sheets": [
